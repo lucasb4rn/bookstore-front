@@ -19,6 +19,11 @@ export class CategoriaService {
     return this.http.get<Categoria[]>(url)
   }
 
+  findById(id: String): Observable<Categoria>{
+    const url = `${this.baseUrl}/categorias/${id}`
+    return this.http.get<Categoria>(url);
+  }
+
   create(categoria: Categoria): Observable<Categoria>{
     const url = `${this.baseUrl}/categorias`
     return this.http.post<Categoria>(url, categoria);
@@ -31,4 +36,11 @@ export class CategoriaService {
       duration: 3000
     })
   }
+
+  delete(id: String):Observable<void>{
+    const url = `${this.baseUrl}/categorias/${id}`
+    return this.http.delete<void>(url)
+  }
+
+
 }
