@@ -1,3 +1,5 @@
+import { LivroReadComponent } from './components/views/livro/livro-read/livro-read.component';
+import { LivroCreateComponent } from './components/views/livro/livro-create/livro-create.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -24,10 +26,14 @@ import { CategoriaReadComponent } from './components/views/categoria/categoria-r
 import { MatTableModule } from '@angular/material/table';
 import { CategoriaCreateComponent } from './components/views/categoria/categoria-create/categoria-create.component';
 import { CategoriaDeleteComponent } from './components/views/categoria/categoria-delete/categoria-delete.component';
-import { FormsModule } from '@angular/forms';
+import { CategoriaUpdateComponent } from './components/views/categoria/categoria-update/categoria-update.component';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { LivroReadAllComponent } from './components/views/livro/livro-read-all/livro-read-all.component';
+import { LivroUpdateComponent } from './components/views/livro/livro-update/livro-update.component';
+import { LivroDeleteComponent } from './components/views/livro/livro-delete/livro-delete.component';
 
 
 @NgModule({
@@ -39,8 +45,15 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     HomeComponent,
     CategoriaReadComponent,
     CategoriaCreateComponent,
-    CategoriaDeleteComponent
+    CategoriaDeleteComponent,
+    CategoriaUpdateComponent,
+    LivroReadAllComponent,
+    LivroCreateComponent,
+    LivroUpdateComponent,
+    LivroDeleteComponent,
+    LivroReadComponent
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -59,7 +72,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     FormsModule,
     MatInputModule,
     MatFormFieldModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    ReactiveFormsModule
   ],
 
   providers: [],
